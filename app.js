@@ -1,10 +1,14 @@
 import express from "express";
 import path from "path";
+import process from "process";
+import { config } from "dotenv";
 import { indexRouter } from "./routers/indexRouter.js";
 import { newRouter } from "./routers/newRouter.js";
 
+config();
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const messages = [];
 
 app.set("views", path.join(import.meta.dirname, "views"));
