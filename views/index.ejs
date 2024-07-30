@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <% messages.forEach(message => { %>
+      <div>
+        <strong><%= message.user %></strong>
+        <div><%= message.message %></div>
+        <div><%= message.date %></div>
+      </div>
+    <% }) %>
+    <a href="/new">Create new message</a>
+  </body>
+</html>
